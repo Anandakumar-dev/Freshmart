@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS Fresh mart</title>
+    <link rel="icon" href="Header image.png">
+
+    <link rel="stylesheet" href="fresh.css">
+
+    <!-- swiper cdn link  -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+
+    <!-- font awesome cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+
+    <!-- 1. header section starts (logo, navbar, search, user, menu, cart)-->
+    <header class="header">
+        <a href="#" class="logo"><i class="fas fa-shopping-basket"></i><span> AS-Freshmart</span></a>
+
+        <nav class="navbar">
+            <a href="#home">home</a>
+            <a href="#features">features</a>
+            <a href="#products">products</a>
+            <a href="#categories">categories</a>
+            <a href="#service">reviews</a>
+            <a href="#blogs">blogs</a>
+        </nav>
+
+        <div class="icons">
+            <div class="fas fa-bars" id="menu-btn"></div>
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-shopping-cart" id="cart-btn"></div>
+            <div class="fas fa-user" id="login-btn"></div>
+        </div>
+
+        <!-- 1. JS-addevent listener used -->
+        <form action="" class="search-form">
+            <input type="search" id="search-box" placeholder="search here....." onkeyup="search()">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <!-- 2. JS-addevent listener used for active/deactive-->
+        <!-- and trash box click function time item removed function -->
+
+        <div class="shopping-cart">
+            <div class="cart-content">
+                <!-- <div class="box" id="cartbox">
+                    <i class="fas fa-trash" id="cartRemove"></i>
+                    <img src="images/tomato.png" alt="">
+                    <div class="content">
+                        <h3>tomato</h3>
+                        <span class="price">Rs.70</span>
+                        <span class="cart-amt">Rs.70</span>
+
+                        <span class="cartQty">Qty<input id="cart-qty" type="number" value="1" min="1"
+                                style="text-align: center; width: 35px;"></span>
+                    </div>
+                </div>
+                <div class="box" id="cartbox">
+                    <i class="fas fa-trash" id="cartRemove"></i>
+                    <img src="images/onion.png" alt="">
+                    <div class="content">
+                        <h3>onion</h3>
+                        <span class="price">Rs.50</span>
+                        <span class="cart-amt">Rs.70</span>
+                        <span class="cartQty">Qty<input id="cart-qty" type="number" value="1" min="1"
+                                style="text-align: center; width: 35px;"></span>
+                    </div>
+                </div>
+                <div class="box" id="cartbox">
+                    <i class="fas fa-trash" id="cartRemove"></i>
+                    <img src="images/fresh-watermeloon.png" alt="">
+                    <div class="content">
+                        <h3>watermelon</h3>
+                        <span class="price">Rs.50</span>
+                        <span class="cart-amt">Rs.70</span>
+                        <span class="cartQty">Qty<input id="cart-qty" type="number" value="1" min="1"
+                                style="text-align: center; width: 35px;"></span>
+                    </div>
+                </div> -->
+            </div>
+            <div class="total">
+                <div class="total-title">Rs.0</div>
+                <a href="checkout.html" id="cart-amt" class="btn">checkout</a>
+            </div>
+        </div>
+
+        <form action="" class="login-form" onsubmit="loginsubmit(event)">
+            <h3>login now</h3>
+            <input type="email" placeholder="enter your mail" class="box" id="login-email">
+            <input type="password" placeholder="enter your password" class="box" id="login-password">
+            <p>forget your password <a href="">click here</a></p>
+            <p>Don't have an account?<a href="">create now</a></p>
+            <input type="submit" value="login now" class="btn">
+            <p id="error-message" style="color: red;"></p>
+        </form>
+    </header>
+    <!-- 1. header section ends -->
+
+    <!-- 2. Home section starts -->
+
+    <section class="home" id="home">
+        <div class="content">
+            <h3>fresh and <span>organic</span> product for your family</h3>
+            <p> Grow Your Own Healthy Vegetables. Grow Your Own Greens, Naturally.</p>
+            <a href="#products" class="btn"
+                id="animate-btn">shop now</a>
+        </div>
+    </section>
+
+    <!-- 2. Home section ends -->
+
+    <!-- 3. Feature section starts -->
+
+    <section class="features" id="features">
+        <h1 class="heading"> our <span>features</span></h1>
+
+        <div class="box-container">
+            <div class="scrool">
+                <div class="box">
+                    <img src="images/fresh and organic.png" alt="">
+                    <h3>fresh and organic</h3>
+                    <p>"Freshness is not just about food; it's about mindset, energy, and a zest for life."</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+
+            <div class="scrool">
+                <div class="box">
+                    <img src="images/free delievery.png" alt="">
+                    <h3>free delivery</h3>
+                    <p>"Happiness is... tracking your free delivery order and seeing 'Out for Delivery'!"</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+            <div class="scrool">
+                <div class="box">
+                    <img src="images/easy payments.png" alt="">
+                    <h3>easy payments</h3>
+                    <p>"Pay with ease, live with peace." <br> "Fast, secure, and hassle-free—just tap and go!"</p>
+                    <a href="#" class="btn">read more</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 3. Feature section ends -->
+
+    <!-- swiper-slide, swiper product-slider, swipper-wrapper used -->
+
+    <section class="products" id="products">
+        <h1 class="heading"> our <span> products</span></h1>
+        <div class="swiper product-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="images/orange.jpg" alt="" class="food-img">
+                    <h3 class="food-title">orange</h3>
+                    <div class="price">Rs.50</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#products" id="addtocart-btn" class="btn" title="click to add">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/Strawberry1.jpg" alt="" class="food-img">
+                    <h3 class="food-title">Strawberry</h3>
+                    <div class="price">Rs.45</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#products" id="addtocart-btn" class="btn" title="click to add">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/Pinapple3.jpg" alt="" class="food-img">
+                    <h3 class="food-title">Pinapple</h3>
+                    <div class="price">Rs.45</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#products" id="addtocart-btn" class="btn" title="click to add">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/pomegran.jpg" alt="" class="food-img">
+                    <h3 class="food-title">Pomegran</h3>
+                    <div class="price">Rs.50</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#products" id="addtocart-btn" class="btn" title="click to add">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/kiwi.jpg" alt="" class="food-img">
+                    <h3 class="food-title">Kiwi</h3>
+                    <div class="price">Rs.45</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#products" id="addtocart-btn" class="btn" title="click to add">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/apple2.jpg" alt="" class="food-img">
+                    <h3 class="food-title">Apple</h3>
+                    <div class="price">Rs.45</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#products" id="addtocart-btn" class="btn" title="click to add">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/grapes.png" alt="" class="food-img">
+                    <h3 class="food-title">Grapes</h3>
+                    <div class="price">Rs.50</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#products" id="addtocart-btn" class="btn" title="click to add">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/fresh-watermeloon.png" alt="" class="food-img">
+                    <h3 class="food-title">Watermeloon</h3>
+                    <div class="price">Rs.45</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#products" id="addtocart-btn" class="btn" title="click to add">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/red graphs.jpg" alt="" class="food-img">
+                    <h3 class="food-title">Grapes</h3>
+                    <div class="price">Rs.45</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#products" id="addtocart-btn" class="btn" title="click to add">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/banana1.jpg" alt="" class="food-img">
+                    <h3 class="food-title">Banana</h3>
+                    <div class="price">Rs.45</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#products" id="addtocart-btn" class="btn" title="click to add">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/Strawberry.jpg" alt="" class="food-img">
+                    <h3 class="food-title">Strawberry</h3>
+                    <div class="price">Rs.45</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#products" id="addtocart-btn" class="btn" title="click to add">add to cart</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2nd product list -->
+
+        <div class="swiper product-slider">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide box">
+                    <img src="images/onion.png" alt="" class="food-img">
+                    <h3 class="food-title">Fresh onion</h3>
+                    <div class="price">Rs.50</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#products" id="addtocart-btn" class="btn" title="click to add">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/tomato.png" alt="" class="food-img">
+                    <h3 class="food-title">Fresh tomato</h3>
+                    <div class="price">Rs.45</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#products" id="addtocart-btn" class="btn" title="click to add">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/capsicum.png" alt="" class="food-img">
+                    <h3 class="food-title">Fresh capsicum</h3>
+                    <div class="price">Rs.50</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#products" id="addtocart-btn" class="btn" title="click to add">add to cart</a>
+                </div>
+
+                <div class="swiper-slide box">
+                    <img src="images/brocoli.png" alt="" class="food-img">
+                    <h3 class="food-title">Fresh brocoli</h3>
+                    <div class="price">Rs.45</div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <a href="#products" id="addtocart-btn" class="btn" title="click to add">add to cart</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- categories section starts -->
+    <section class="categories" id="categories">
+        <h1 class="heading">Product <span>categories</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="images/products1-veg.png" alt="">
+                <h3>vegitables</h3>
+                <p>upto 25% off</p>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+
+            <div class="box">
+                <img src="images/products2-fruits.png" alt="">
+                <h3>Fresh Fruits</h3>
+                <p>upto 45% off</p>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+
+            <div class="box">
+                <img src="images/productss3-dairy.png" alt="">
+                <h3>daily products</h3>
+                <p>upto 45% off</p>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+
+            <div class="box">
+                <img src="images/product4-meat.png" alt="">
+                <h3>fresh meat</h3>
+                <p>upto 45% off</p>
+                <a href="#" class="btn">Shop Now</a>
+            </div>
+        </div>
+    </section>
+    <!-- categories section ends -->
+
+    <!-- review section-alternate -->
+
+    <section class="customer-feedback" id="service">
+        <div class="feedback_container cus-feedback_container">
+            <div class="feedback__content">
+                <h1 class="heading">customer's <span>review</span></h1>
+                <!-- <p class="feedback__subheader">Customer Feedback</p>
+                <h2 class="feedback__header">What your customer say about us.</h2> -->
+                <div class="comment-slider" style="
+                 --width:400px;
+                 --height:340px;
+                 --quantity:4;
+                 ">
+                    <div class="sec3-comment-container">
+
+                        <!-- comment box 1 -->
+                        <div class="comment-box comment1" style="--position: 1">
+                            <!-- top part -->
+                            <div class="comment-profile ">
+                                <div class="prof-img">
+                                    <img src="images/stylish2.png" />
+                                </div>
+                                <div class="name-user">
+                                    <strong>sasi</strong>
+                                    <span>Local Guide &#x2022; 184 reviews &#x2022; 792 photos</span>
+                                </div>
+                            </div>
+
+                            <div class="comment-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <div class="customer-comment">
+                                <p>Specializes in delivering a wide variety of over 200 fruits and vegetables directly
+                                    to your doorstep. They emphasize freshly harvested produce and offer convenient
+                                    online ordering.</p>
+                                <p> Freshmart have to service the 24 hours routinely.
+                                    near thosand lights & Egmore
+                                    <br> <br>
+                                    keep continue... rocks
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="comment-box comment2" style="--position: 2">
+                            <!-- top part -->
+                            <div class="comment-profile">
+                                <div class="prof-img">
+                                    <img src="images/stylish1.png">
+                                </div>
+                                <div class="name-user">
+                                    <strong>Indira kumar</strong>
+                                    <span>3 reviews &#x2022; 3 photos</span>
+                                </div>
+                            </div>
+
+                            <div class="comment-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <div class="customer-comment">
+                                <p>I recommend the best affordable online freshmart in thousand lights for home
+                                    delievery.
+                                    The vegitables are very fresh and clean, highly recommended.</p>
+
+                                <p>our expected satisfaction has fulfilled a lot. <br>
+                                    One of the fresh fruits and veg can assest easy way...
+                                    Best Price.... Perfect Food....Great service.... cant replace in that local
+                                    marketing</p>
+                            </div>
+                        </div>
+
+                        <div class="comment-box comment3" style="--position: 3">
+                            <!-- top part -->
+                            <div class="comment-profile">
+                                <div class="prof-img">
+                                    <img src="images/stylish1.png" />
+                                </div>
+                                <div class="name-user">
+                                    <strong>John Eswar</strong>
+                                    <span>1 review</span>
+                                </div>
+                            </div>
+
+                            <div class="comment-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <div class="customer-comment">
+                                <p> A Chennai-based online grocery store offering a curated selection of over 100
+                                    handpicked products, including fresh produce. They focus on quality and timely
+                                    delivery within the city.</p>
+                                <p>"Freshmart have to service the 24 hours routinely. our expected satisfaction has
+                                    fulfilled a lot. keep continue"</p>
+                            </div>
+                        </div>
+
+                        <div class="comment-box comment4" style="--position: 4">
+                            <!-- top part -->
+                            <div class="comment-profile">
+                                <div class="prof-img">
+                                    <img src="images/stylish2.png">
+                                </div>
+                                <div class="name-user">
+                                    <strong>Periyanayagi</strong>
+                                    <span>3 reviews</span>
+                                </div>
+                            </div>
+
+                            <div class="comment-rating">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+
+                            <div class="customer-comment">
+                                <p>Delivers premium organic groceries, including naturoponic vegetables and fresh
+                                    fruits. They emphasize chemical-free produce and offer delivery services across
+                                    Chennai.</p>
+                                <p>I recommend the best affordable online freshmart in thousand lights for home
+                                    delievery.
+                                    The vegitables are very fresh and clean, highly recommended.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <!-- blogs section starts -->
+
+    <section class="blogs" id="blogs">
+        <h1 class="heading">our <span>blogs</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="images/blog1.png" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-user"></i>By user</a>
+                        <a href="#"><i class="fas fa-calendar"></i>26th jan, 2025</a>
+                    </div>
+                    <h3>AS fresh marketing provide the organic veg & Fruits</h3>
+                    <p>From Seed to Table, Taste the Freshness. Grow Your Way to a Greener and Tastier Future!
+                        Vegetables keep you healthy.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/blog2.png" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-user"></i>By user</a>
+                        <a href="#"><i class="fas fa-calendar"></i>26th jan, 2025</a>
+                    </div>
+                    <h3>AS fresh marketing provide the organic veg & Fruits</h3>
+                    <p>Green Thumb, Happy Tummy. Good for nature, good for you. Garden Green, Live Clean. Green Thumbs
+                        Grow Their Own.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+
+            <div class="box">
+                <img src="images/blog1.png" alt="">
+                <div class="content">
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-user"></i>By user</a>
+                        <a href="#"><i class="fas fa-calendar"></i>26th jan, 2025</a>
+                    </div>
+                    <h3>AS fresh marketing provide the organic veg & Fruits</h3>
+                    <p>From Seed to Table, Taste the Freshness. Grow Your Way to a Greener and Tastier Future!
+                        Vegetables keep you healthy.</p>
+                    <a href="#" class="btn">Read More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- blogs section ends -->
+
+    <!-- footer section starts -->
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>AS Fresh <i class="fas fa-shopping-basket"></i></h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita, corporis.</p>
+                <div class="share">
+                    <a href="#" class="fab fa-facebook-f"></a>
+                    <a href="#" class="fab fa-twitter"></a>
+                    <a href="#" class="fab fa-linkedin"></a>
+                    <a href="#" class="fab fa-instagram"></a>
+                </div>
+            </div>
+
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#" class="links"><i class="fas fa-phone"></i> +99420-61760</a>
+                <a href="#" class="links"><i class="fas fa-phone"></i> +95002-40420</a>
+                <a href="#" class="links"><i class="fas fa-envelope"></i> apjkalam94@gmail.com</a>
+                <a href="#" class="links"><i class="fas fa-map-marker-alt"></i> chennai-600 006, India</a>
+            </div>
+
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="#" class="links"><i class="fas fa-arrow-right"></i> home</a>
+                <a href="#" class="links"><i class="fas fa-arrow-right"></i> features</a>
+                <a href="#" class="links"><i class="fas fa-arrow-right"></i> products</a>
+                <a href="#" class="links"><i class="fas fa-arrow-right"></i> categories</a>
+                <a href="#" class="links"><i class="fas fa-arrow-right"></i> review</a>
+                <a href="https://vegease.in/blog/" class="links"><i class="fas fa-arrow-right"></i> blogs</a>
+            </div>
+
+            <div class="box">
+                <h3>Newsletter</h3>
+                <p>subscribe for latest update</p>
+                <input type="email" class="email" id="emails" placeholder="Enter your mail">
+                <input type="submit" name="" id="" value="subscribe" class="btn" onclick="onsubmitform()">
+                <img src="images/payment2.png" alt="" class="payment-img">
+            </div>
+        </div>
+        <div class="credit">Created by <span>AS Web design & Developers </span> | all rights reserved</div>
+    </section>
+    <!-- footer section ends -->
+
+    <!-- whatsapp API Link starts -->
+
+    <div class="whatsapp-btn-container">
+        <a href="https://wa.me/919942061760" class="whatsapp-btn"><i class="fab fa-whatsapp"></i></a>
+        <span>Contact us</span>
+    </div>
+
+    <!-- whatsapp API Link ends -->
+
+    <!-- Scroll-up button starts-->
+    <button class="scroll-up-btn" title="click to scroll"><i class="fa-solid fa-angles-up"></i></button>
+    <!-- Scroll-up button ends -->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script> -->
+
+
+    <script src="fresh.js"></script>
+
+    <!-- <script src="update.js"></script> -->
+    <!-- <script src="workout.js"></script> -->
+
+</body>
+
+</html>
